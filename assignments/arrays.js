@@ -77,21 +77,25 @@ console.log(`Car 33 is a ${year} ${make} ${model}` );
 // ==== Challenge 2 ====
 // The dealer needs the information on the last car in their inventory.  
 //What is the make and model of the last car in the inventory?  Log the make and model into the console.
-let lastCar = 0;
-for (lastcar; lastcar < inventory.length - 1; lastcar++) {
-console.log(`${lastcar}`)};
+let lastcar = 49;
+console.log(inventory[49]);
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. 
 //Sort all the car model names into alphabetical order and log the results in the console
-let carModels = [];
-console.log();
+const models = inventory.sort(function(a, b){
+    if(a.car_model < b.car_model) { return -1; }
+    if(a.car_model > b.car_model) { return 1; }
+    return 0;
+})
+console.log(models);
+
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from 
 //the dealer data containing only the car years and log the result in the console.
 let carYears = [];
-console.log();
+console.log(Object.entries(inventory["car_year"]));
 
 // ==== Challenge 5 ====
 // The car lot manager needs to find out how many cars are older than the year 2000. Using the 
