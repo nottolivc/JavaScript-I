@@ -157,13 +157,14 @@ console.log(oldCars.sort());
 //Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, 
 //use JSON.stringify() to show the results of the array in the console.
 
-//let BMWAndAudi = [];
-
-//for(let q = 0; q <= inventory.length - 1; q++) { 
-//    if(inventory[q].car_make == "BMW" || == "Audi") { 
-//        console.log(inventory[q].car_make); 
-//    } 
-//};
-
+let BMWAndAudi = [];
+for(let i = 0; i <= inventory.length - 1; i++) { 
+    if(inventory[i].car_make === "BMW" || 
+    inventory[i].car_make === "Audi") { 
+        BMWAndAudi.push(inventory[i]);
+    } 
+};
+console.log(BMWAndAudi);
+//
 
 
