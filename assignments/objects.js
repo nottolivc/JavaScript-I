@@ -30,8 +30,9 @@ const interns = [{
   "name": "Kennan",
   "email": "kdiben1@tinypic.com",
   "gender": "M",
-  "speak": function (topic){
-     console.log(`${this.name} wants to speak ${topic}`);
+   speak: function (){
+     return `Hello, my name is ${this.name};!` //string interpolation
+     // "hello my name is" + this.name;
   }
 },
 {
@@ -51,7 +52,7 @@ const interns = [{
   "name": "Anionette",
   "email": "adaine5@samsung.com",
   "gender": "F",
-  "multiplyNum": function(num1, num2) {
+  multiplyNum: function(num1, num2) {
     return num1 * num2;
   }
 }];
@@ -63,19 +64,26 @@ const interns = [{
 
 console.log(interns[0].name);
 // Kennan's ID
+
 console.log(interns[1].id);
 // Keven's email
+
 console.log(interns[2].email);
 // Gannie's name
+
 console.log(interns[3].name);
 // Antonietta's Gender
+
 console.log(interns[4].gender);
+
 // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
-
-
+//console.log(interns[1].speak());
+//example.speak = function() {
+//  return this.name;
+//}
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
-//console.log(antonietta.multiplyNums(3,4));
+//console.log(interns[4].multiplyNum(2, 2);
 
 // === Great work! === Head over to the the arrays.js file or take a look at the stretch challenge
 
@@ -101,23 +109,30 @@ console.log(interns[4].gender);
 // Have the grandchild speak
 
 const parent = {
-  "name": "Dorthy",
-  "age": 75 ,
-  "speak": function() {
+  "name": "Susan",
+  "age": 70 ,
+  speak: function() {
     return "Hello, my name is " + this.name + "!";
     },
   child: {
-    "name": "Ken",
-    "age": 45,
-    "speak": function() {
+    "name": "George",
+    "age": 50,
+    speak: function() {
       return "Hello, my name is " + this.name + "!";
       },
     grandchild: {
-      "name": "Todd",
-      "age": 21,
-      "speak": function() {
+      "name": "Sam",
+      "age": 30,
+      speak: function() {
         return "Hello, my name is " + this.name + "!";
         }
     }
   }
 }
+
+console.log(parent.name);
+
+console.log(parent.child.age);
+
+console.log(parent.child.grandchild.speak(), parent.child.grandchild.age);
+
