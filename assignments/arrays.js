@@ -166,5 +166,6 @@ for(let i = 0; i <= inventory.length - 1; i++) {
 };
 console.log(BMWAndAudi);
 //
-
+//
+console.log(JSON.stringify[BMWAndAudi]);
 
