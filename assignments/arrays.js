@@ -97,31 +97,47 @@ console.log(inventory[49]);
 // The marketing team wants the car models listed alphabetically on the website. 
 //Sort all the car model names into alphabetical order and log the results in the console
 
-const models = inventory.sort(function(a, b){
-    if(a.car_model < b.car_model) { return -1; }
-    if(a.car_model > b.car_model) { return 1; }
-    return 0;
-})
-console.log(models);
+//const models = inventory.sort(function(a, b){
+//    if(a.car_model < b.car_model) { return -1; }
+//    if(a.car_model > b.car_model) { return 1; }
+//    return 0;
+//})
+//console.log(models);
+
+let carModels = [];
+for(let i = 0; i < inventory.length; i++) {
+    carModels.push(inventory[i].car_model)
+};
+console.log(carModels.sort());
+
+//inventory.forEach(car => carModels(push.car_models));
 
 // or this 
 
-const counterFactory = () => {};
+//const counterFactory = () => {};
 
-  let increment = () => count_num += 1;
-  let decrement = () => count_num -= 1;
+//  let increment = () => count_num += 1;
+// let decrement = () => count_num -= 1;
 
-console.log(counterFactory);
+//console.log(counterFactory);
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from 
 //the dealer data containing only the car years and log the result in the console.
 
-let carYears = inventory.sort(function(a, b) {
-    return a - b;
-});
+//let carYears = inventory.sort(function(a, b) {
+//    return a - b;
+//});
 
-console.log(carYears);
+//console.log(carYears);
+
+let carYears = [];
+for(let i = 0; i < inventory.length; i++) {
+    carYears.push(inventory[i].car_year)
+};
+console.log(carYears.sort());
+
+//inventory.forEach(car => carModels(push.car_models))
 
 // ==== Challenge 5 ====
 // The car lot manager needs to find out how many cars are older than the year 2000. Using the 
@@ -130,18 +146,24 @@ console.log(carYears);
 
 let oldCars = [];
 
+for(let i = 0; i < carYears.length; i++) {
+    if(carYears[i] < 2000) {
+    oldCars.push(carYears[i]);
+}};
+console.log(oldCars.sort());
+
 // ==== Challenge 6 ====
 // A buyer is interested in seeing only BMW and Audi cars within the inventory.  
 //Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, 
 //use JSON.stringify() to show the results of the array in the console.
 
-let BMWAndAudi = [];
+//let BMWAndAudi = [];
 
-for(let q = 0; q <= inventory.length - 1; q++) { 
-    if(inventory[q].car_make == "BMW" || == "Audi") { 
-        console.log(inventory[q].car_make); 
-    } 
-};
+//for(let q = 0; q <= inventory.length - 1; q++) { 
+//    if(inventory[q].car_make == "BMW" || == "Audi") { 
+//        console.log(inventory[q].car_make); 
+//    } 
+//};
 
 
 
